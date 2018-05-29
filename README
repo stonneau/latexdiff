@@ -11,3 +11,23 @@ On 10/09/2017 11:19 AM, Steve Tonneau wrote:
 > + to ignore commands, use
 > --exclude-textcmd="section,subsection" with any keywords that you want
 > ignore (like equation, cite ...)
+
+
+
+If, like me before, you have trouble comparing changes in latex files,
+it means you don't know latex diff :
+
+
+https://emeryblogger.com/2011/01/14/diff-your-latex-files-with-latexdiff/
+
+(I m pointing to this particular link because there's a trick for people
+breaking down there latex papers in multiple files)
+
+git latex diff allows you to generate comparison files between your git
+commits:
+
+https://gitlab.com/git-latexdiff/git-latexdiff
+
+try it now, thank me later
+
+Steve
