@@ -1,5 +1,4 @@
-latexdiff -p diff-pre.tex --type=CCHANGEBAR
---append-safecmd="nu.*,v.*,such.*{,}" --exclude-safecmd="in"
+latexdiff -p diff-pre.tex --type=CCHANGEBAR --append-safecmd="nu.*,v.*,such.*{,}" --exclude-safecmd="in"
 
 On 10/09/2017 11:19 AM, Steve Tonneau wrote:
 > + you should never use $$, but displaymath of \[\] instead.
