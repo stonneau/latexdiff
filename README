@@ -1,0 +1,13 @@
+latexdiff -p diff-pre.tex --type=CCHANGEBAR
+--append-safecmd="nu.*,v.*,such.*{,}" --exclude-safecmd="in"
+
+On 10/09/2017 11:19 AM, Steve Tonneau wrote:
+> + you should never use $$, but displaymath of \[\] instead.
+>
+> Here's a script to do it:
+>
+> https://tex.stackexchange.com/questions/118021/how-to-replace-all-by
+>
+> + to ignore commands, use
+> --exclude-textcmd="section,subsection" with any keywords that you want
+> ignore (like equation, cite ...)
