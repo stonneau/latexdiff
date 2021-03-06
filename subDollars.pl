@@ -98,16 +98,16 @@ open(MAINFILE, $ARGV[0]) or die "Could not open input file";
 while(<MAINFILE>)
 {
     # check for BEGIN of an environment that doesn't want substitutions
-    $nosubs = 1 if( $_ =~ m/^\s*\\begin{(.*?)}/ and $nosubstitutions{$1} );
+    $nosubs = 1 if( $_ =~ m/^\s*\\begin\{(.*?)\}/ and $nosubstitutions{$1} );
 
     # check for %\begin{nosubblock}
-    $nosubs = 1 if( $_ =~ m/^\s*%\s*\\begin{(.*?)}/ and $nosubstitutions{$1} );
+    $nosubs = 1 if( $_ =~ m/^\s*%\s*\\begin\{(.*?)\}/ and $nosubstitutions{$1} );
 
     # check for END of an environment that doesn't want substitutions
-    $nosubs = 0 if( $_ =~ m/^\s*\\end{(.*?)}/ and $nosubstitutions{$1});
+    $nosubs = 0 if( $_ =~ m/^\s*\\end\{(.*?)\}/ and $nosubstitutions{$1});
 
     # check for %\end{nosubblock}
-    $nosubs = 0 if( $_ =~ m/^\s*%\s*\\end{(.*?)}/ and $nosubstitutions{$1} );
+    $nosubs = 0 if( $_ =~ m/^\s*%\s*\\end\{(.*?)\}/ and $nosubstitutions{$1} );
 
     # substitute $.*$ with \(.*\) 
     # note: this does NOT match $$.*$$
